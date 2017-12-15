@@ -1,0 +1,13 @@
+<div class="thumbnail">
+    <img src="http://placehold.it/320x150">
+    <!-- 중괄호 표현식 실행 결과가 문자열로 변환되어 템플릿 표현식 자리에 치환된다
+         문자열 삽입 (string interpolation) -->
+    <div class="caption">
+        <h4 class="pull-right">{{ product.price }}</h4>
+        <h4><a>{{ product.title }}</a></h4>
+        <p>{{ product.description }}</p>
+    </div>
+    <div>
+        <auction-stars [rating]="product.rating"></auction-stars>
+    </div>
+</div>
