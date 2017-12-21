@@ -21,6 +21,7 @@ System.config({
 		'@angular/compiler' : { main : 'bundles/compiler.umd.min.js' },
 		'@angular/platform-browser' : { main : 'bundles/platform-browser.umd.min.js' },
 		'@angular/platform-browser-dynamic' : { main : 'bundles/platform-browser-dynamic.umd.min.js' },
+        '@angular/router' : { main : 'bundles/router.umd.min.js' },
 
 		'app' : { main : 'main', defaultExtension : 'ts' }	// 애플리케이션 코드는 app 폴더에 위치, 시작점은 main.ts 파일을 지정
 	}
