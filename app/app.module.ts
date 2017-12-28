@@ -13,14 +13,14 @@ import HomeComponent from "./components/home/home.component";
 import ProductDetailComponent from "./components/product-detail/product-detail.component";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
+
 @NgModule({
     imports : [BrowserModule,
         RouterModule.forRoot([
             { path : '', component : HomeComponent },
-            { path : 'products/:prodTitle', component : ProductDetailComponent }
+            { path : 'products/:productId', component : ProductDetailComponent }
         ])],
-    declarations : [
-        ApplicationComponent,
+    declarations : [ApplicationComponent,
         CarouselComponent,
         FooterComponent,
         NavbarComponent,
@@ -28,9 +28,9 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
         ProductDetailComponent,
         ProductItemComponent,
         SearchComponent,
-        StarsComponent
-    ],
-    providers : [ProductService, {provide : LocationStrategy, useClass : HashLocationStrategy }], // Product Service가 ApplicationComponent에 주입될 때 사용한다.
+        StarsComponent],
+    providers : [ProductService,
+        { provide : LocationStrategy, useClass : HashLocationStrategy }],
     bootstrap : [ApplicationComponent]
 })
 export class AppModule {}
